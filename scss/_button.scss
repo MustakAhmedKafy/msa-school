@@ -8,6 +8,8 @@
   font-weight: bold;
   height: 40px;
   font-size: 14px;
+  display: inline-flex;
+  align-items: center;
 
   &:hover {
     color: $white;
@@ -58,9 +60,21 @@
   color: $primary-color;
   font-weight: bold;
   height: 40px;
+  display: inline-flex;
+  align-items: center;
 
   &:hover {
     background-color: #73709bb4 !important;
     color: $white;
   }
+}
+
+.btn-outline-light {
+  padding: 5px 30px !important;
+  height: 40px;
+  display: inline-flex;
+  color: $white;
+  font-weight: bold;
+  align-items: center;
+  font-size: 16px;
 }

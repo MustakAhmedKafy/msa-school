@@ -132,3 +132,16 @@ p {
   display: flex;
   align-items: center;
 }
+
+/* breadcrumbs */
+.breadcrumbs {
+  background-image: url("assets/img/breadcrumb-bg.png"); 
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+display: flex;
+flex-direction: column;
+
+}

@@ -759,6 +759,95 @@ header {
 
 
 
+// subject page
+
+.subject {
+  .card {
+    background-color: #eaeaef;
+    text-align: center;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    .subject-icon {
+      width: 65px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      background-color: white;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid rgb(128, 128, 128);
+    }
+  }
+}
+
+// teacher list page
+
+.our-teacher {
+  .team-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    .card-text {
+      text-align: center;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card-contact,
+    .card-email {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
+
+
+
+
 
 // responsive
 

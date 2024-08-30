@@ -117,6 +117,18 @@ p {
   margin-right: 0;
 } */
 
-.team-slider .card {
-  background-image: url("assets/img/card-bg.png");
+.contact-us {
+  background-image: url("assets/img/info-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-testimonial {
+  background-image: url("assets/img/testimonial-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 530px;
+  display: flex;
+  align-items: center;
 }

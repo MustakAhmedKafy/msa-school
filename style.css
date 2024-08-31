@@ -135,13 +135,15 @@ p {
 
 /* breadcrumbs */
 .breadcrumbs {
-  background-image: url("assets/img/breadcrumb-bg.png"); 
+  background-image: url("assets/img/breadcrumb-bg.png");
   color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
-display: flex;
-flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
+}
+.breadcrumbs__text {
+  font-size: 18px;
 }

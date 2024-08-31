@@ -845,8 +845,429 @@ header {
   }
 }
 
+// student list page
+.student-list {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .table {
+    table-layout: fixed;
+    width: 100%;
+
+    td {
+      background-color: #f3f4f6;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    th,
+    td {
+      vertical-align: middle;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    thead {
+      tr {
+        border: none; // Removes any border from the thead tr
+      }
+
+      th {
+        background-color: #E5E7EB;
+        color: $primary-color;
+        padding: 10px;
+        border: none; // Removes any border from the th elements
+
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+
+        td {
+          border-bottom: none; // Removes the border from the bottom of the last row
+        }
+
+        td:first-child {
+          border-bottom-left-radius: 10px;
+        }
+
+        td:last-child {
+          border-bottom-right-radius: 10px;
+        }
+      }
+
+    }
+
+    img {
+
+      object-fit: cover;
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    min-width: 260px;
+    margin-bottom: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+    padding: 8px 15px;
+    background-color: #E5E7EB;
+    color: #000;
+
+    &::placeholder {
+      color: #9CA3AF;
+    }
+  }
+
+  .dropdown-wrapper {
+    text-align: right;
+  }
+
+  .dropdown-wrapper select {
+    min-width: 260px;
+  }
+
+  .form-select {
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+    padding: 8px 15px;
+    background-color: #E5E7EB;
+    color: #000;
+    padding: 8px 30px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
 
 
+// routine page
+
+.class-routine {
+  .table {
+    table-layout: fixed;
+
+    th,
+    td {
+      text-align: center;
+      vertical-align: middle;
+
+      &:first-child {
+        text-align: left;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+
+    td {
+      p {
+        padding: 8px;
+        background-color: #D0D0D0;
+        width: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 40px;
+        margin-right: 5px
+      }
+    }
+
+    thead tr {
+      border: 0;
+      border-color: #E5E7EB;
+      background-color: #f7f8f9;
+    }
+
+    th {
+      white-space: nowrap;
+      color: $primary-color;
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f8f9fa; // Light gray background for even rows
+        }
+
+        td {
+          i {
+            font-size: 1.25rem; // Adjust icon size
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-wrapper select {
+    min-width: 260px;
+  }
+
+  .form-select {
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+    padding: 8px 15px;
+    background-color: #E5E7EB;
+    color: #000;
+    padding: 8px 30px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// class-fee  page
+
+.class-fee {
+  .table {
+    table-layout: fixed;
+
+    th,
+    td {
+      text-align: center;
+      vertical-align: middle;
+      color: $primary-color;
+
+      &:first-child {
+        text-align: left;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+    }
+
+
+
+    thead tr {
+      border: 0;
+      border-color: #E5E7EB;
+      background-color: #f7f8f9;
+    }
+
+    th {
+      white-space: nowrap;
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f8f9fa; // Light gray background for even rows
+        }
+
+        td {
+          i {
+            font-size: 1.25rem; // Adjust icon size
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-wrapper input {
+    min-width: 260px;
+  }
+
+  .form-control {
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+    padding: 8px 15px;
+    background-color: #E5E7EB;
+    color: #000;
+    padding: 8px 30px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+}
+
+// our-testimonial page
+.our-testimonial {
+  .about-us {
+    h6 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #4B5563;
+      font-size: 1.5rem;
+    }
+
+    i {
+      color: $primary-color;
+    }
+  }
+
+  .testimonial-section-1 {
+    h2 {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .descrition {
+      color: #4B5563;
+    }
+
+    .card {
+      img {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+
+      .rating {
+        padding-top: 20px;
+
+        span {
+          color: $primary-color;
+          font-size: 18px;
+        }
+
+      }
+
+      p {
+        color: #4B5563;
+      }
+
+      h5 {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .testimonial-section-2 {
+    h2 {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: #e0dfe7;
+
+      img {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+
+      .rating {
+        padding-top: 20px;
+
+        span {
+          color: $primary-color;
+          font-size: 18px;
+        }
+
+      }
+
+      p {
+        color: #4B5563;
+      }
+
+      h5 {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+// admission-form page
+.admission-form {
+  .card {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    .card-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 1rem;
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+
+      h2 {
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #6c757d;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 4px;
+      border: 1px solid #ced4da;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(#007bff, 10%);
+      }
+    }
+  }
+}
+
+
+// Dropdown button styles
+.btn-outline-secondary {
+  border-radius: 30px;
+  padding: 5px 20px;
+}
+
+// Responsive behavior
+.table-responsive {
+  overflow-x: auto;
+}
 
 
 // responsive

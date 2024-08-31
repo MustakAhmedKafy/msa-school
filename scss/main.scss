@@ -2,6 +2,10 @@
 @import "button";
 @import "input";
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 p {
   margin: 0;
 }
@@ -1207,55 +1211,116 @@ header {
 
 // admission-form page
 .admission-form {
-  .card {
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  .form-label {
+    font-weight: 700;
+    color: #4B5563;
+    padding-left: 25px;
+  }
 
-    .card-header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 1rem;
-      border-bottom: none;
-      border-radius: 8px 8px 0 0;
+  input[type="text"],
+  input[type="date"],
+  input[type="file"],
+  select {
+    border-radius: 30px;
+    padding: 7px 25px;
+    border: 1px solid #E5E7EB;
+    background-color: #F3F4F6;
+  }
 
-      h2 {
-        margin: 0;
-        font-weight: 500;
-      }
+  .form-check-input {
+    margin-top: 0.3rem;
+  }
+
+  .form-check-label {
+    margin-left: 10px;
+
+  }
+
+  .upload-photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .upload-photo-input {
+      display: none; // Hide the default input element
     }
 
-    .card-body {
-      padding: 2rem;
-    }
-
-    .form-label {
-      font-weight: 500;
-      color: #6c757d;
-    }
-
-    .form-control,
-    .form-select {
-      border-radius: 4px;
+    .upload-photo-label {
+      width: 150px;
+      height: 150px;
+      background-color: #f8f9fa;
       border: 1px solid #ced4da;
-      padding: 0.75rem;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #6c757d;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 10px;
 
       &:hover {
-        background-color: darken(#007bff, 10%);
+        background-color: #e9ecef;
+        border-color: #adb5bd;
       }
     }
   }
+
+
+  h3,
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .text-center {
+    margin-bottom: 1rem;
+  }
+
 }
+
+
+// contact page
+.contact-with-us {
+  h2 {
+    color: $primary-color;
+  }
+
+  .form-label {
+    font-weight: 700;
+    color: #4B5563;
+    padding-left: 25px;
+  }
+
+  .form-control {
+    border-radius: 30px;
+    padding: 7px 25px;
+    border: 1px solid #E5E7EB;
+    background-color: #F3F4F6;
+  }
+  img{
+    object-fit: contain;
+  }
+  a{
+    text-decoration: none;
+  }
+  button{
+    display: flex;
+    justify-content: center;
+  }
+}
+
 
 
 // Dropdown button styles

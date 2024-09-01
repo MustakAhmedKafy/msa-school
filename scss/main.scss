@@ -1102,7 +1102,7 @@ header {
 
 .class-fee {
   .table {
- 
+
 
     th,
     td {
@@ -1410,6 +1410,128 @@ header {
 }
 
 
+.about-our-company {
+  .education-power {
+    .vision-images img {
+      object-fit: cover;
+    }
+
+    .image2 {
+      position: absolute;
+      width: 330px;
+      bottom: -70px;
+      right: 0;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: $primary-color;
+    }
+
+    .vision-title {
+      font-weight: 700;
+      font-size: 24px;
+      margin-top: 1rem;
+    }
+
+    .vision-description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      color: #4B5563;
+    }
+  }
+
+  // mission section
+  .mission-section {
+    .section-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: $primary-color;
+    }
+
+    .mission-title {
+      font-weight: 700;
+      font-size: 24px;
+      margin-top: 1rem;
+    }
+
+    .mission-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .mission-list {
+      margin-top: 2rem;
+    }
+
+    .mission-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #9CA3AF;
+      padding-bottom: 10px;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    .mission-number {
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+    }
+
+    .mission-subtitle {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .mission-item-description {
+      font-size: 18px;
+      margin-top: 0.3rem;
+      color: #4B5563;
+    }
+  }
+
+  // principla mesage
+  .principal-message {
+    .principal-img img {
+      width: 350px;
+    }
+
+    .social-media {
+      position: absolute;
+      left: 0;
+      top: 0;
+      writing-mode: vertical-lr;
+      background-color: #F3F4F6;
+      padding: 10px 15px;
+      border-radius: 30px;
+
+      a {
+        padding: 20px 0px;
+      }
+
+      i {
+        font-size: 22px;
+      }
+    }
+
+  }
+
+
+}
+
+
 // responsive
 
 // large
@@ -1439,6 +1561,7 @@ header {
   .class-routine .table {
     table-layout: fixed;
   }
+
   .class-fee .table {
     table-layout: fixed;
   }
@@ -1588,10 +1711,12 @@ header {
   .class-routine .d-flex {
     display: block !important;
   }
+
   .class-fee .d-flex {
     display: block !important;
   }
-  .our-testimonial .about-us p{
+
+  .our-testimonial .about-us p {
     font-size: 16px;
   }
 }

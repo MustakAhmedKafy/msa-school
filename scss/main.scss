@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+body {
+  font-family: "Inter",
+    system-ui;
+}
 
 p {
   margin: 0;
@@ -28,6 +32,8 @@ p {
   }
 }
 
+
+
 header {
   background-color: #2B2E54;
 
@@ -45,6 +51,7 @@ header {
         color: #9CA3AF;
         padding: 10px;
         position: relative;
+        display: inline;
 
         &::after {
           content: '';
@@ -66,6 +73,16 @@ header {
       .active {
         color: $white;
       }
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      color: wheat;
+    }
+
+    svg {
+      color: #fff;
     }
 
   }
@@ -111,7 +128,7 @@ header {
 
   input.search-text:focus {
     z-index: 3;
-    width: 250px;
+    width: 215px;
     border: 1px solid #fff;
     background-color: $primary-color;
     outline: none;
@@ -226,6 +243,10 @@ header {
 
   .d-flex p {
     color: #9ca3af;
+  }
+
+  .pin {
+    width: 2rem;
   }
 
   .custom-nav-tabs {
@@ -716,13 +737,6 @@ header {
     display: flex;
     gap: 6px;
 
-    iframe {
-      width: 110px;
-      height: 80px;
-      border-radius: 5px;
-      border: none;
-    }
-
     p {
       font-size: 18px;
       color: #000;
@@ -735,6 +749,43 @@ header {
       color: #4B5563;
       font-weight: 600;
     }
+  }
+
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 200px;
+    height: 82px;
+    /* Adjust the size as needed */
+  }
+
+  .image-card .bg-img {
+    width: 100%;
+    height: 82px;
+    display: block;
+    border-radius: inherit;
+  }
+
+  .image-card .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .image-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay color */
+    z-index: 1;
+    border-radius: inherit;
   }
 
   .footer-bottom {
@@ -856,7 +907,7 @@ header {
   }
 
   .table {
-    table-layout: fixed;
+
     width: 100%;
 
     td {
@@ -972,7 +1023,7 @@ header {
 
 .class-routine {
   .table {
-    table-layout: fixed;
+
 
     th,
     td {
@@ -1051,7 +1102,7 @@ header {
 
 .class-fee {
   .table {
-    table-layout: fixed;
+ 
 
     th,
     td {
@@ -1217,9 +1268,32 @@ header {
     padding-left: 25px;
   }
 
+  .form-check-input {
+    padding: 5px;
+    border: 0;
+    background-color: #F3F4F6;
+    margin-top: 0.3rem;
+    height: 25px;
+    width: 25px;
+    border-radius: 0;
+  }
+
+  .form-check-input:checked[type=checkbox] {
+    background-color: #E5E7EB;
+  }
+
+
+  .form-check-input:focus {
+    box-shadow: 0 0 5px 2px rgba(47, 0, 255, .6);
+    outline: 0;
+    border: 0;
+    background-color: #E5E7EB;
+  }
+
   input[type="text"],
   input[type="date"],
   input[type="file"],
+  input[type="number"],
   select {
     border-radius: 30px;
     padding: 7px 25px;
@@ -1227,9 +1301,7 @@ header {
     background-color: #F3F4F6;
   }
 
-  .form-check-input {
-    margin-top: 0.3rem;
-  }
+
 
   .form-check-label {
     margin-left: 10px;
@@ -1309,13 +1381,16 @@ header {
     border: 1px solid #E5E7EB;
     background-color: #F3F4F6;
   }
-  img{
+
+  img {
     object-fit: contain;
   }
-  a{
+
+  a {
     text-decoration: none;
   }
-  button{
+
+  button {
     display: flex;
     justify-content: center;
   }
@@ -1353,29 +1428,74 @@ header {
     border-bottom: 0.3em solid;
   }
 
+  .slider {
+    height: 930px;
+  }
 
+  .student-list .table {
+    table-layout: fixed;
+  }
+
+  .class-routine .table {
+    table-layout: fixed;
+  }
+  .class-fee .table {
+    table-layout: fixed;
+  }
 }
 
 
 
-// 
+// mobile and tab
 @media screen and (max-width: 991px) {
   .dropdown-toggle.show::after {
     border-top: 0;
     border-bottom: 0.3em solid;
   }
 
-  header {
-    background-color: #092F78;
 
+  header {
     .nav-item {
       margin: 10px 0px;
+      text-align: left;
     }
+
+    .d-flex {
+      display: block !important;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 10px;
+
+      input.search-text {
+        position: absolute;
+        left: 16px;
+
+      }
+
+      .btn-light {
+        margin-top: 10px;
+      }
+
+    }
+
   }
 
+  .blog .blog-card img {
+    width: 140px;
+    height: 110px;
+  }
 
+  .blog .blog-card h6 {
+    font-size: 18px;
+  }
+
+  .student-list .table img {
+    width: 70px;
+  }
 }
 
+
+// lg
 @media (min-width: 992px) and (max-width: 1400px) {
   header {
     .nav-link {
@@ -1387,7 +1507,56 @@ header {
     .btn {
       font-size: 14px;
     }
+
+    .navbar .navbar-nav .nav-item {
+      padding: 0;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    input.search-text:focus {
+      width: 150px;
+    }
   }
+
+  .our-academics .card-container .card h5 {
+    font-size: 1.2rem;
+  }
+
+  .home-testimonial .card p {
+    font-size: 14px;
+  }
+
+  .blog .blog-card h6 {
+    font-size: 18px;
+  }
+
+  .footer .image-card {
+    width: 250px;
+  }
+
+  .footer .video-item p {
+    font-size: 16px;
+  }
+
+  .slider {
+    height: 800px;
+  }
+
+  .our-status .counter-box .count {
+    font-size: 2rem;
+  }
+
+  .our-status .counter-box {
+    height: 200px;
+  }
+
+  .our-status .counter-box .title {
+    font-size: 14px;
+  }
+
 }
 
 /*only mobile area */
@@ -1404,17 +1573,45 @@ header {
     height: 35px;
   }
 
-  .mobile-app .nav-item {
-    margin-bottom: 10px;
+  .slider {
+    min-height: 930px !important;
+  }
+
+  .notice {
+    padding-top: 60px;
+  }
+
+  .student-list .d-flex {
+    display: block !important;
+  }
+
+  .class-routine .d-flex {
+    display: block !important;
+  }
+  .class-fee .d-flex {
+    display: block !important;
+  }
+  .our-testimonial .about-us p{
+    font-size: 16px;
   }
 }
 
 // tab area only 
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .slider {
+    height: 680px !important;
+  }
 
+  .our-status .counter-box .count {
+    font-size: 2.2rem;
+  }
 
-  .mobile-app .row {
-    align-items: center;
+  .our-status .counter-box .title {
+    font-size: 13px;
+  }
+
+  .notice {
+    padding-top: 110px;
   }
 
 }

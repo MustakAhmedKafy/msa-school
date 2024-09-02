@@ -133,6 +133,21 @@ p {
   align-items: center;
 }
 
+.institute-info {
+ background-image: url('assets/img/institute-info.png');
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+  min-height: 70vh;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+
 /* breadcrumbs */
 .breadcrumbs {
   background-image: url("assets/img/breadcrumb-bg.png");
@@ -148,9 +163,8 @@ p {
   font-size: 18px;
 }
 
-
 @media (max-width: 768px) {
-  .breadcrumbs{
+  .breadcrumbs {
     height: 520px;
   }
 }

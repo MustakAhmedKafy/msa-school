@@ -2000,7 +2000,7 @@ header {
   }
 
   .slider {
-    height: 800px;
+    height: 880px;
   }
 
   .our-status .counter-box .count {
@@ -2013,6 +2013,16 @@ header {
 
   .our-status .counter-box .title {
     font-size: 14px;
+  }
+
+  .slider {
+    .carousel-control-prev {
+      left: -30px;
+    }
+
+    .carousel-control-next {
+      right: -30px;
+    }
   }
 
 }
